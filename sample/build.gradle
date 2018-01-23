@@ -1,0 +1,20 @@
+group 'com.lemon'
+version '1.0'
+
+apply plugin: 'java'
+apply plugin: 'code-lines'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+codeLinesExtension {
+    suffixs = ['.java', '.xml']
+    dir = 'sample/src'
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}

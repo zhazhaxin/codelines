@@ -1,0 +1,5 @@
+rootProject.name = 'codelines'
+include 'code-lines'
+include 'sample'
+include 'code-lines-plugin'
+

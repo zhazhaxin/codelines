@@ -1,0 +1,43 @@
+group 'com.lemon'
+version '1.3'
+
+apply plugin: 'groovy'
+apply plugin: 'maven-publish'
+apply plugin: "maven"
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    compile localGroovy()
+    compile gradleApi()
+}
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'code-lines-plugin' //bintray上的项目名
+
+    publishedGroupId = group
+    libraryVersion = version
+    artifactId = 'code-lines-plugin'
+
+    siteUrl = 'https://github.com/llxdaxia/codelines'
+    gitUrl = 'https://github.com/llxdaxia/codelines.git'
+
+    libraryName = 'code-lines-plugin' //项目名字，没什么用
+    libraryDescription = 'code lines' //项目描述，没什么用
+
+    developerId = 'Lemon'
+    developerName = 'Lemon'
+    developerEmail = 'daxiallx@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+// install 在 高版本 gradle sdk 中有了
+//apply from: 'https://raw.githubusercontent.com/llxdaxia/GradleScript/master/install_v1.gradle'
+apply from: 'https://raw.githubusercontent.com/llxdaxia/GradleScript/master/bintray_v1.gradle'
