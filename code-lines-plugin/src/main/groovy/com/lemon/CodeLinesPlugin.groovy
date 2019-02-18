@@ -28,5 +28,8 @@ class CodeLinesPlugin implements Plugin<Project> {
             }
             println "Statistics code lines file types : $task.suffixs"
         }
+        task.doLast {
+
+        }
     }
 }
